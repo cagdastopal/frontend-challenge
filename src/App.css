@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  max-height: 2530px;
+  margin: auto;
+}
