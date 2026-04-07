@@ -1,4 +1,9 @@
-export default function Hero( { darkMode } ) {
+import { useTheme } from '../context/ThemeContext';
+
+export default function Hero() {
+
+  const { darkMode } = useTheme();
+  
   return(
   <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white mt-8'}`}>
 

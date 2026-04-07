@@ -1,5 +1,10 @@
-export default function Projects( { darkMode } ) {
-   const projects = [
+import { useTheme } from '../context/ThemeContext';
+
+export default function Projects() {
+
+  const { darkMode } = useTheme();
+  
+  const projects = [
     {
       id: 1,
       title: "Workintech project1",

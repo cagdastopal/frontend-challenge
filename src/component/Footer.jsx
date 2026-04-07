@@ -1,4 +1,9 @@
-export default function Footer( {darkMode} ) {
+import { useTheme } from '../context/ThemeContext';
+
+export default function Footer() {
+
+  const { darkMode } = useTheme();
+
   return(
      <footer className={`px-30 py-12 ${darkMode ? 'bg-black' : 'bg-gray-100' }`}>
 

@@ -1,4 +1,8 @@
-export default function Header( { darkMode } ) {
+import { useTheme } from '../context/ThemeContext';
+
+export default function Header() {
+
+  const { darkMode } = useTheme();
   
   return (
   <header className={`px-30 ${darkMode ? 'bg-black' : 'bg-white mt-1'}`}>

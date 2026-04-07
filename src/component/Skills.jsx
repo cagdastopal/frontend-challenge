@@ -1,4 +1,9 @@
-export default function Skills( { darkMode } ) {
+import { useTheme } from '../context/ThemeContext';
+
+export default function Skills() {
+
+  const { darkMode } = useTheme();
+  
   return(
      <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white mt-8'}`}>
 
@@ -49,7 +54,7 @@ export default function Skills( { darkMode } ) {
 
         <div>
           <h3 className="text-[32px] font-medium text-violet-600 mb-4 font-bold">
-            Oracle SQL Developer
+            Oracle SQL
           </h3>
           <p className="text-[12px] leading-[20px] text-gray-500">
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui

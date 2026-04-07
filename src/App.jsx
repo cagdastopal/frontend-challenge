@@ -5,15 +5,11 @@ import Skills from './component/Skills'
 import Profile from './component/Profile'
 import Projects from './component/Projects'
 import Footer from './component/Footer'
-import { useState } from 'react'
+import { useTheme } from './context/ThemeContext'
 
 export default function App() {
 
-  const [darkMode, setDarkMode] = useState(false);
-
-    const changeDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode, changeDarkMode } = useTheme();
 
   return(
   <>
@@ -44,12 +40,12 @@ export default function App() {
       </nav> 
     </div>
     
-    <Header darkMode = {darkMode}/>
-    <Hero darkMode = {darkMode}/>
-    <Skills darkMode = {darkMode}/>
-    <Profile darkMode = {darkMode}/>
-    <Projects darkMode = {darkMode}/>
-    <Footer darkMode = {darkMode}/>
+    <Header />
+    <Hero />
+    <Skills />
+    <Profile />
+    <Projects />
+    <Footer />
   </>
   )
 }

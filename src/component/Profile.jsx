@@ -1,4 +1,9 @@
-export default function Profile( { darkMode } ) {
+import { useTheme } from '../context/ThemeContext';
+
+export default function Profile() {
+
+  const { darkMode } = useTheme();
+  
   return(
     <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white pt-12 pb-6'}`}>
         
