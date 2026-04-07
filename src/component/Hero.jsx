@@ -16,7 +16,7 @@ export default function Hero() {
             <span className="text-violet-600 font-medium">Çağdaş Topal</span>
         </div>
 
-        <h1 className="text-5xl font-bold text-gray-800 leading-tight mb-6">
+        <h1 className="text-5xl font-bold text-gray-800 mb-6">
           Creative thinker <br />
           Minimalism lover
         </h1>
@@ -28,15 +28,15 @@ export default function Hero() {
         </p>
 
         <div className="flex items-center gap-2">
-          <button className="cursor-pointer border px-4 py-2 rounded-md bg-violet-600 text-white">
+          <button className="cursor-pointer border px-4 py-2 rounded-md bg-violet-600 text-white hover:font-bold">
             Hire me
           </button>
 
-          <button className={`cursor-pointer border px-4 py-2 rounded-md ${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
+          <button className={`cursor-pointer border px-4 py-2 rounded-md hover:text-violet-600 hover:font-bold ${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
             Github
           </button>
 
-          <button className={`cursor-pointer border px-4 py-2 rounded-md ${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
+          <button className={`cursor-pointer border px-4 py-2 rounded-md hover:text-violet-600 hover:font-bold ${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
             Linkedin
           </button>
         </div>
