@@ -5,7 +5,7 @@ export default function Hero() {
   const { darkMode } = useTheme();
   
   return(
-  <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white mt-8'}`}>
+  <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white'}`}>
 
     <div className="h-[1px] w-full" />
     <div className="w-full py-12 flex items-center justify-between ">

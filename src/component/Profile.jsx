@@ -5,7 +5,7 @@ export default function Profile() {
   const { darkMode } = useTheme();
   
   return(
-    <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white pt-12 pb-6'}`}>
+    <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white'}`}>
         
       <h2 className="text-[48px] font-bold text-[#1f2937] mb-10">
         Profile

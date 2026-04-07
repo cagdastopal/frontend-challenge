@@ -5,7 +5,7 @@ export default function Header() {
   const { darkMode } = useTheme();
   
   return (
-  <header className={`px-30 ${darkMode ? 'bg-black' : 'bg-white mt-1'}`}>
+  <header className={`px-30 pt-5 ${darkMode ? 'bg-black' : 'bg-white'}`}>
     <nav className="flex justify-end items-center gap-[50px] cursor-pointer">
       <a className="text-[20px] font-medium text-gray-500 hover:text-violet-600">
         Skills

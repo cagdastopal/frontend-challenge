@@ -5,7 +5,7 @@ export default function Skills() {
   const { darkMode } = useTheme();
   
   return(
-     <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white mt-8'}`}>
+     <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white'}`}>
 
       <div className="h-[1px] w-full bg-[#c7c3ff]" />
 
