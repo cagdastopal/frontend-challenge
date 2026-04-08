@@ -50,24 +50,9 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="flex gap-3 mb-6">
-                <span className="border border-indigo-500 text-indigo-600 text-[14px] px-4 py-1 rounded-md">
-                  react
-                </span>
-                <span className="border border-indigo-500 text-indigo-600 text-[14px] px-4 py-1 rounded-md">
-                  redux
-                </span>
-                <span className="border border-indigo-500 text-indigo-600 text-[14px] px-4 py-1 rounded-md">
-                  axios
-                </span>
-              </div>
-
               <div className="flex items-center justify-between">
                 <a href="https://github.com/cagdastopal/fsweb-s4-bonus-challenge-html-pizza" className="text-[16px] text-indigo-700 underline">
                   Github
-                </a>
-                <a href="#" className="text-[16px] text-indigo-700 underline">
-                  View Site
                 </a>
               </div>
             </div>

@@ -10,21 +10,28 @@ import { useTheme } from './context/ThemeContext';
 import axios from 'axios'
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useLanguage } from '../src/context/LanguageContext';
 
 export default function App() {
 
   const { darkMode } = useTheme();
-  
-  useEffect( () => {
-    axios
-      .post('https://reqres.in/api/workintech', {
-        data: {
-          darkMode: darkMode,
+  const { language } = useLanguage();
+
+useEffect(() => {
+  axios
+    .post(
+      'https://reqres.in/api/workintech',
+      { darkMode, language },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': 'pub_38ae796452887f8ad58e595da92d13189debc04e1aef5927d68bdfcde88d9c9e',
         },
-      })
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error.message));
-  }, [darkMode])
+      }
+    )
+    .then((response) => console.log(response.data))
+    .catch((error) => console.log(error.message));
+}, [darkMode, language]);
 
   return(
   <>
@@ -51,6 +58,7 @@ export default function App() {
       <Route path="/projects">
         <Projects />
       </Route>
+
     </Switch>
     <Footer />
   </Router>

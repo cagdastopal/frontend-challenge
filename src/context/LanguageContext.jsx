@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
+import { toast } from 'react-toastify';
 
 const LanguageContext = createContext();
 
@@ -9,8 +10,10 @@ export function LanguageProvider({ children }) {
   const changeLanguageMode = () => {
     if(language === "EN") {
         setLanguage("TR");
+        toast.success("Türkçe Seçildi!");
     } else {
         setLanguage("EN");
+        toast.success("English Selected!");
     }
   };
 
