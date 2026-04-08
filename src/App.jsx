@@ -5,47 +5,55 @@ import Skills from './component/Skills'
 import Profile from './component/Profile'
 import Projects from './component/Projects'
 import Footer from './component/Footer'
-import { useTheme } from './context/ThemeContext'
+import ModeSwitch from './component/ModeSwitch'
+import { useTheme } from './context/ThemeContext';
+import axios from 'axios'
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function App() {
 
-  const { darkMode, changeDarkMode } = useTheme();
+  const { darkMode } = useTheme();
+  
+  useEffect( () => {
+    axios
+      .post('https://reqres.in/api/workintech', {
+        data: {
+          darkMode: darkMode,
+        },
+      })
+      .then((response) => console.log(response.data))
+      .catch((error) => console.log(error.message));
+  }, [darkMode])
 
   return(
   <>
-      <div className={`flex justify-end items-center text-center pt-10 text-[13px] font-bold gap-[20px] px-30 
-        ${darkMode ? 'bg-black' : 'bg-white'}`}>
-        <label className="relative cursor-pointer">
-        <input type="checkbox" value="" checked = {darkMode} onChange={changeDarkMode} className="peer sr-only" />
-
-        <div className="
-          h-6 w-11 rounded-full bg-violet-300 transition
-          peer-checked:bg-violet-600
-        "></div>
-
-        <span className="
-          absolute left-1 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-gray-300 transition
-          peer-checked:translate-x-5
-        "></span>
-      </label>
-
-      <span className="uppercase text-gray-600">
-         {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </span>
-
-      <span className="text-gray-300">|</span>
-
-      <nav>
-        <a href = "#" className="text-[13px] font-bold text-violet-600 uppercase"> Türkçe </a>
-      </nav> 
-    </div>
-    
+  <Router>
+    <ModeSwitch />
     <Header />
     <Hero />
-    <Skills />
-    <Profile />
-    <Projects />
+    <Switch>
+      
+      <Route path="/" exact>
+        <Skills />
+        <Profile />
+        <Projects />
+      </Route>
+
+      <Route path="/skills">
+        <Skills />
+      </Route>
+
+      <Route path="/profile">
+        <Profile />
+      </Route>
+
+      <Route path="/projects">
+        <Projects />
+      </Route>
+    </Switch>
     <Footer />
+  </Router>
   </>
   )
 }

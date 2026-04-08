@@ -1,8 +1,11 @@
 import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
+import  {translations}  from '../data.js';
 
 export default function Footer() {
 
   const { darkMode } = useTheme();
+  const { language } = useLanguage();
 
   return(
      <footer className={`px-30 py-12 ${darkMode ? 'bg-black' : 'bg-gray-100' }`}>
@@ -11,8 +14,7 @@ export default function Footer() {
         
         <div>
           <h2 className="text-[20px] font-bold text-[#1f2937] mb-6">
-            Let’s work together on <br />
-            your next product.
+            {language === 'TR' ? translations.TR.footer.text : translations.EN.footer.text}
           </h2>
         </div>
 
@@ -23,13 +25,13 @@ export default function Footer() {
           > cagdas.topal@hotmail.com
           </a>
 
-          <a href="#" className="text-gray-700">
+          <a href="/" className="text-gray-700">
             Personal Blog
           </a>
-          <a href="#" className="text-green-600 font-medium">
+          <a href="https://github.com/cagdastopal" className="text-green-600 font-medium">
             Github
           </a>
-          <a href="#" className="text-blue-600 font-medium">
+          <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fda%C5%9F-topal-a0b163113/" className="text-blue-600 font-medium">
             Linkedin
           </a>
         </div>

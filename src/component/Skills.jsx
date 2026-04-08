@@ -1,15 +1,24 @@
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import  {translations}  from '../data.js';
 
 export default function Skills() {
 
   const { darkMode } = useTheme();
-  
+  const { language } = useLanguage();
+
   return(
-     <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white'}`}>
+    <>      
+      <section className={`px-30 ${darkMode ? 'bg-neutral-900' : 'bg-white'}`}>
 
       <div className="h-[1px] w-full bg-[#c7c3ff]" />
 
-      <h2 className="text-[48px] font-bold text-[#1f2937] mb-10">Skills</h2>
+      <Link to="/skills">
+        <h2 className="text-[48px] font-bold text-[#1f2937] mb-10">
+          {language === 'TR' ? translations.TR.skills.title : translations.EN.skills.title}
+        </h2>
+      </Link>
 
       <div className="grid grid-cols-5 gap-x-24">
         <div>
@@ -64,6 +73,7 @@ export default function Skills() {
       </div>
 
       <div className="mt-8 h-[1px] w-full bg-[#c7c3ff]" />
-    </section>
+      </section>
+    </>
   )
 }

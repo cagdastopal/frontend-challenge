@@ -1,51 +1,63 @@
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import  {translations}  from '../data.js';
 
 export default function Profile() {
 
   const { darkMode } = useTheme();
-  
+  const { language } = useLanguage();
+
   return(
-    <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white'}`}>
+    <section className={`px-30 ${darkMode ? 'bg-neutral-900' : 'bg-white'}`}>
         
-      <h2 className="text-[48px] font-bold text-[#1f2937] mb-10">
-        Profile
-      </h2>
+      <Link to="/profile">
+        <h2 className="text-[48px] font-bold text-[#1f2937] mb-10">
+          {language === 'TR' ? translations.TR.profile.profile : translations.EN.profile.profile}
+        </h2>
+      </Link>
 
       <div className="grid grid-cols-2 gap-x-32">
         
         <div>
-          <h3 className="text-[32px] font-medium text-violet-600 mb-4 font-bold">Profile</h3>
+          <h3 className="text-[32px] font-medium text-violet-600 mb-4 font-bold">
+            {language === 'TR' ? translations.TR.profile.profile : translations.EN.profile.profile}
+          </h3>
 
           <div className="space-y-4 text-[16px]">
             <div className="flex gap-6">
               <span className="font-semibold min-w-[140px] text-gray-500">
-                Doğum tarihi
-              </span>
-              <span className="text-gray-700">28.08.1989</span>
-            </div>
-
-            <div className="flex gap-6">
-              <span className="font-semibold min-w-[140px] text-gray-500">
-                İkamet Şehri
-              </span>
-              <span className="text-gray-700">İstanbul</span>
-            </div>
-
-            <div className="flex gap-6">
-              <span className="font-semibold min-w-[140px] text-gray-500">
-                Eğitim Durumu
+                {language === 'TR' ? translations.TR.profile.dateofbirthday : translations.EN.profile.dateofbirthday}
               </span>
               <span className="text-gray-700">
-                Doğu Akdeniz Üniversitesi - Bilgisayar Mühendisliği, 2013
+                {language === 'TR' ? translations.TR.profile.dateinfo : translations.EN.profile.dateinfo}
               </span>
             </div>
 
             <div className="flex gap-6">
               <span className="font-semibold min-w-[140px] text-gray-500">
-                Tercih Ettiği Rol
+                {language === 'TR' ? translations.TR.profile.city : translations.EN.profile.city}
               </span>
               <span className="text-gray-700">
-                Frontend, UI
+                {language === 'TR' ? translations.TR.profile.cityinfo : translations.EN.profile.cityinfo}
+              </span>
+            </div>
+
+            <div className="flex gap-6">
+              <span className="font-semibold min-w-[140px] text-gray-500">
+                {language === 'TR' ? translations.TR.profile.graduate : translations.EN.profile.graduate}
+              </span>
+              <span className="text-gray-700">
+                {language === 'TR' ? translations.TR.profile.graduateinfo : translations.EN.profile.graduateinfo}
+              </span>
+            </div>
+
+            <div className="flex gap-6">
+              <span className="font-semibold min-w-[140px] text-gray-500">
+                {language === 'TR' ? translations.TR.profile.preferrole : translations.EN.profile.preferrole}
+              </span>
+              <span className="text-gray-700">
+                {language === 'TR' ? translations.TR.profile.preferroleinfo : translations.EN.profile.preferroleinfo}
               </span>
             </div>
           </div>
@@ -53,17 +65,11 @@ export default function Profile() {
 
         <div>
           <h3 className="text-[32px] font-medium text-violet-600 mb-4 font-bold">
-            About Me
+            {language === 'TR' ? translations.TR.profile.about : translations.EN.profile.about}
           </h3>
 
           <p className="text-gray-500 leading-[28px] mb-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Veniam aut, odit laborum aliquam voluptatum nisi mollitia.
-          </p>
-
-          <p className="text-gray-500 leading-[28px]">
-            Minima accusamus ratione soluta aperiam sit voluptate? 
-            Dicta quod deserunt quam temporibus cumque magnam!
+            {language === 'TR' ? translations.TR.profile.aboutinfo : translations.EN.profile.aboutinfo}
           </p>
         </div>
       </div>

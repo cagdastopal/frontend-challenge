@@ -1,4 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 export default function Projects() {
 
@@ -29,10 +30,8 @@ export default function Projects() {
   ];
 
   return (
-    <section className={`px-30 ${darkMode ? 'bg-black' : 'bg-white'}`}>
-        <h2 className="text-[48px] font-bold text-[#1f2937]">
-          Projects
-        </h2>
+    <section className={`px-30 ${darkMode ? 'bg-neutral-900' : 'bg-white'}`}>
+        <Link to="/projects"><h2 className="text-[48px] font-bold text-[#1f2937] mb-10">Projects</h2></Link>
 
         <div className="grid grid-cols-3 gap-x-4">
           {projects.map((project) => (
@@ -75,7 +74,7 @@ export default function Projects() {
           ))}
         </div>
 
-        {darkMode && <div className="mt-8 h-[1px] w-full bg-[#c7c3ff]" />}
+        {darkMode && <div className="mt-8 h-[1px] w-full bg-neutral-900" />}
     </section>
   )
 }
