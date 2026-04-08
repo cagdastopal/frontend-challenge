@@ -9,21 +9,21 @@ export default function Projects() {
     {
       id: 1,
       title: "Workintech project1",
-      image: "./public/project1.png",
+      image: "/project1.png",
       description:
         "Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.",
     },
     {
       id: 2,
       title: "Workintech project2",
-      image: "./public/project1.png",
+      image: "/project1.png",
       description:
         "Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.",
     },
     {
       id: 3,
       title: "Workintech project3",
-      image: "./public/project1.png",
+      image: "/project1.png",
       description:
         "Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.",
     }

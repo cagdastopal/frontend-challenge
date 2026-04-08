@@ -1,6 +1,6 @@
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import  {translations}  from '../data.js';
+import {translations}  from '../data.js';
 
 export default function Hero() {
 
@@ -44,7 +44,7 @@ export default function Hero() {
 
       <div className="w-[700px] h-[500px] rounded-xl overflow-hidden shadow-lg">
         <img
-          src="./public/picture1.jpg"
+          src="/picture1.jpg"
           alt="profile"
           className="w-full h-full object-cover"
         />
