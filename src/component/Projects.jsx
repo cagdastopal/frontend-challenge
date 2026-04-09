@@ -1,30 +1,39 @@
 import { useTheme } from '../context/ThemeContext';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data.js';
 
 export default function Projects() {
   const { darkMode } = useTheme();
-
+  const { language } = useLanguage();
+  
   const projects = [
     {
       id: 1,
       title: "Workintech project1",
       image: "/project1.png",
-      description:
+      descriptiontr:
         "Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.",
+      descriptionen:
+        "This project is designed to help you improve your HTML and CSS skills as preparation for the S8 presentation in the Workintech Full Stack Web Development training. In this project, you are expected to replicate the given design exactly using only HTML and CSS. Use the Figma design file as a reference to build the visual structure of your page."
     },
     {
       id: 2,
       title: "Workintech project2",
       image: "/project1.png",
-      description:
+      descriptiontr:
         "Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.",
+      descriptionen:
+        "This project is designed to help you improve your HTML and CSS skills as preparation for the S8 presentation in the Workintech Full Stack Web Development training. In this project, you are expected to replicate the given design exactly using only HTML and CSS. Use the Figma design file as a reference to build the visual structure of your page."
     },
     {
       id: 3,
       title: "Workintech project3",
       image: "/project1.png",
-      description:
+      descriptiontr:
         "Bu proje, Workintech Full Stack Web Geliştirme eğitimindeki S8 sunuma hazırlık olarak, HTML ve CSS becerilerini geliştirmeniz için tasarlanmıştır. Bu projede, sadece HTML ve CSS kullanarak verilen tasarımı aynen uygulamanız beklenmektedir. Figma tasarım dosyasını referans alarak, sayfanızın görsel yapısını oluşturun.",
+      descriptionen:
+        "This project is designed to help you improve your HTML and CSS skills as preparation for the S8 presentation in the Workintech Full Stack Web Development training. In this project, you are expected to replicate the given design exactly using only HTML and CSS. Use the Figma design file as a reference to build the visual structure of your page."
     }
   ];
 
@@ -45,7 +54,7 @@ export default function Projects() {
             ${darkMode ? 'text-white' : 'text-[#1f2937]'}
           `}
         >
-          Projects
+          {language === 'TR' ? "Projeler" : "Projects"}
         </h2>
       </Link>
 
@@ -76,7 +85,7 @@ export default function Projects() {
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
-              {project.description}
+              {language === 'TR' ? project.descriptiontr : project.descriptionen}
             </p>
 
             <div className="flex items-center justify-between">

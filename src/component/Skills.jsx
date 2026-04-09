@@ -35,7 +35,7 @@ export default function Skills() {
 
         <div
           className="
-            grid grid-cols-5 gap-x-24
+            grid grid-cols-3 gap-x-24
             max-[800px]:grid-cols-1
             max-[800px]:gap-y-8
             max-[800px]:gap-x-0
@@ -54,8 +54,7 @@ export default function Skills() {
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              {language === "TR" ? "JavaScript, web sayfalarına etkileşim kazandıran bir programlama dilidir." : "JavaScript is a programming language that adds interactivity to web pages." }
             </p>
           </div>
 
@@ -71,8 +70,8 @@ export default function Skills() {
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              {language === "TR" ? "JavaScript, web sayfalarına etkileşim kazandıran bir programlama dilidir." : "JavaScript is a programming language that adds interactivity to web pages." }
+
             </p>
           </div>
 
@@ -88,8 +87,9 @@ export default function Skills() {
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+
+              {language === "TR" ? "Node.js, JavaScript’in tarayıcı dışında da çalışmasını sağlayan ve sunucu tarafında hızlı ve ölçeklenebilir uygulamalar geliştirmeye imkân veren bir çalışma ortamıdır." : "Node.js is a runtime environment that allows JavaScript to run outside the browser and enables building fast and scalable server-side applications." }
+
             </p>
           </div>
 
@@ -105,8 +105,27 @@ export default function Skills() {
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+
+              {language === "TR" ? "Redux, JavaScript uygulamalarında durum (state) yönetimini merkezi ve öngörülebilir hale getiren bir state yönetim kütüphanesidir." : "Redux is a state management library that makes application state predictable and centralized in JavaScript applications." }
+
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[22px]">
+              React
+            </h3>
+            <p
+              className={`
+                text-[12px] leading-[20px]
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
+                ${darkMode ? 'text-gray-300' : 'text-gray-500'}
+              `}
+            >
+
+              {language === "TR" ? "React, kullanıcı arayüzleri oluşturmak için kullanılan, bileşen tabanlı ve yeniden kullanılabilir yapılar sunan bir JavaScript kütüphanesidir." : "React is a JavaScript library used to build user interfaces with a component-based and reusable structure." }
+
             </p>
           </div>
 
@@ -122,8 +141,9 @@ export default function Skills() {
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              
+              {language === "TR" ? "Oracle SQL, Oracle veritabanlarında veri sorgulamak, eklemek, güncellemek ve yönetmek için kullanılan yapılandırılmış sorgu dilidir." : "Oracle SQL is a structured query language used to query, insert, update, and manage data in Oracle databases." }
+
             </p>
           </div>
         </div>
