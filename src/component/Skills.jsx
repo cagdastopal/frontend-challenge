@@ -12,7 +12,7 @@ export default function Skills() {
       <section
         className={`
           px-30
-          max-[500px]:px-5
+          max-[800px]:px-5
           ${darkMode ? 'bg-neutral-900' : 'bg-white'}
         `}
       >
@@ -22,8 +22,8 @@ export default function Skills() {
           <h2
             className={`
               text-[48px] font-bold mb-10
-              max-[500px]:text-[28px]
-              max-[500px]:mb-6
+              max-[800px]:text-[28px]
+              max-[800px]:mb-6
               ${darkMode ? 'text-white' : 'text-[#1f2937]'}
             `}
           >
@@ -36,21 +36,21 @@ export default function Skills() {
         <div
           className="
             grid grid-cols-5 gap-x-24
-            max-[500px]:grid-cols-1
-            max-[500px]:gap-y-8
-            max-[500px]:gap-x-0
+            max-[800px]:grid-cols-1
+            max-[800px]:gap-y-8
+            max-[800px]:gap-x-0
           "
         >
           <div>
-            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[22px]">
+            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[800px]:text-[22px]">
               Java Script
             </h3>
             <p
               className={`
                 text-[12px] leading-[20px] max-w-[260px]
-                max-[500px]:max-w-full
-                max-[500px]:text-[14px]
-                max-[500px]:leading-[24px]
+                max-[800px]:max-w-full
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
@@ -60,14 +60,14 @@ export default function Skills() {
           </div>
 
           <div>
-            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[22px]">
+            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[800px]:text-[22px]">
               React.Js
             </h3>
             <p
               className={`
                 text-[12px] leading-[20px]
-                max-[500px]:text-[14px]
-                max-[500px]:leading-[24px]
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
@@ -83,8 +83,8 @@ export default function Skills() {
             <p
               className={`
                 text-[12px] leading-[20px]
-                max-[500px]:text-[14px]
-                max-[500px]:leading-[24px]
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
@@ -100,8 +100,8 @@ export default function Skills() {
             <p
               className={`
                 text-[12px] leading-[20px]
-                max-[500px]:text-[14px]
-                max-[500px]:leading-[24px]
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
@@ -111,14 +111,14 @@ export default function Skills() {
           </div>
 
           <div>
-            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[22px]">
+            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[800px]:text-[22px]">
               Oracle SQL
             </h3>
             <p
               className={`
                 text-[12px] leading-[20px]
-                max-[500px]:text-[14px]
-                max-[500px]:leading-[24px]
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >

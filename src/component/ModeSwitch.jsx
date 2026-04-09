@@ -10,11 +10,11 @@ export default function ModeSwitch() {
       className={`
         flex justify-end items-center text-center
         pt-10 px-30 gap-[20px] text-[13px] font-bold
-        max-[500px]:px-5
-        max-[500px]:pt-6
-        max-[500px]:gap-3
-        max-[500px]:text-[11px]
-        max-[500px]:flex-wrap
+        max-[800px]:px-5
+        max-[800px]:pt-6
+        max-[800px]:gap-3
+        max-[800px]:text-[11px]
+        max-[800px]:flex-wrap
         ${darkMode ? 'bg-neutral-900' : 'bg-white'}
       `}
     >
@@ -31,8 +31,8 @@ export default function ModeSwitch() {
           className="
             h-6 w-11 rounded-full bg-violet-300 transition
             peer-checked:bg-violet-600
-            max-[500px]:h-5
-            max-[500px]:w-10
+            max-[800px]:h-5
+            max-[800px]:w-10
           "
         ></div>
 
@@ -40,14 +40,14 @@ export default function ModeSwitch() {
           className="
             absolute left-1 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-gray-300 transition
             peer-checked:translate-x-5
-            max-[500px]:h-3.5
-            max-[500px]:w-3.5
-            max-[500px]:peer-checked:translate-x-4
+            max-[800px]:h-3.5
+            max-[800px]:w-3.5
+            max-[800px]:peer-checked:translate-x-4
           "
         ></span>
       </label>
 
-      <span className="uppercase text-gray-600 max-[500px]:text-[11px]">
+      <span className="uppercase text-gray-600 max-[800px]:text-[11px]">
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </span>
 
@@ -56,7 +56,7 @@ export default function ModeSwitch() {
       <nav>
         <a
           href="#"
-          className="text-[13px] font-bold text-violet-600 uppercase max-[500px]:text-[11px]"
+          className="text-[13px] font-bold text-violet-600 uppercase max-[800px]:text-[11px]"
           onClick={changeLanguageMode}
         >
           {language === 'TR' ? 'Türkçe' : 'English'}

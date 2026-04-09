@@ -10,24 +10,24 @@ export default function Header() {
     <header
       className={`
         px-30 pt-5
-        max-[500px]:px-5
-        max-[500px]:pt-3
+        max-[800px]:px-5
+        max-[800px]:pt-3
         ${darkMode ? 'bg-neutral-900' : 'bg-white'}
       `}
     >
       <nav
         className="
           flex justify-end items-center gap-[50px]
-          max-[500px]:gap-4
-          max-[500px]:justify-end
-          max-[500px]:flex-wrap
+          max-[800px]:gap-4
+          max-[800px]:justify-end
+          max-[800px]:flex-wrap
         "
       >
         <a
           href="/skills"
           className="
             text-[20px] font-medium text-gray-500 hover:text-violet-600
-            max-[500px]:text-[14px]
+            max-[800px]:text-[14px]
           "
         >
           {language === 'TR'
@@ -39,7 +39,7 @@ export default function Header() {
           href="/projects"
           className="
             text-[20px] font-medium text-gray-500 hover:text-violet-600
-            max-[500px]:text-[14px]
+            max-[800px]:text-[14px]
           "
         >
           {language === 'TR'
@@ -56,9 +56,9 @@ export default function Header() {
             rounded-[8px] text-[20px] font-medium
             hover:bg-violet-600 hover:text-white
 
-            max-[500px]:h-[36px]
-            max-[500px]:px-[16px]
-            max-[500px]:text-[14px]
+            max-[800px]:h-[36px]
+            max-[800px]:px-[16px]
+            max-[800px]:text-[14px]
           "
         >
           {language === 'TR'

@@ -32,7 +32,7 @@ export default function Projects() {
     <section
       className={`
         px-30
-        max-[500px]:px-5
+        max-[800px]:px-5
         ${darkMode ? 'bg-neutral-900' : 'bg-white'}
       `}
     >
@@ -40,8 +40,8 @@ export default function Projects() {
         <h2
           className={`
             text-[48px] font-bold mb-10
-            max-[500px]:text-[28px]
-            max-[500px]:mb-6
+            max-[800px]:text-[28px]
+            max-[800px]:mb-6
             ${darkMode ? 'text-white' : 'text-[#1f2937]'}
           `}
         >
@@ -52,27 +52,27 @@ export default function Projects() {
       <div
         className="
           grid grid-cols-3 gap-x-4
-          max-[500px]:grid-cols-1
-          max-[500px]:gap-y-8
+          max-[800px]:grid-cols-1
+          max-[800px]:gap-y-8
         "
       >
         {projects.map((project) => (
-          <div key={project.id} className="flex flex-col py-5 max-[500px]:py-0">
+          <div key={project.id} className="flex flex-col py-5 max-[800px]:py-0">
             <img
               src={project.image}
               alt={project.title}
               className="w-full object-cover mb-6 rounded-xl"
             />
 
-            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[22px]">
+            <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[800px]:text-[22px]">
               {project.title}
             </h3>
 
             <p
               className={`
                 leading-[28px] mb-6
-                max-[500px]:text-[14px]
-                max-[500px]:leading-[24px]
+                max-[800px]:text-[14px]
+                max-[800px]:leading-[24px]
                 ${darkMode ? 'text-gray-300' : 'text-gray-500'}
               `}
             >
@@ -82,7 +82,7 @@ export default function Projects() {
             <div className="flex items-center justify-between">
               <a
                 href="https://github.com/cagdastopal/fsweb-s4-bonus-challenge-html-pizza"
-                className="text-[16px] text-indigo-700 underline max-[500px]:text-[14px]"
+                className="text-[16px] text-indigo-700 underline max-[800px]:text-[14px]"
               >
                 Github
               </a>

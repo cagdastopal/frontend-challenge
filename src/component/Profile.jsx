@@ -11,7 +11,7 @@ export default function Profile() {
     <section
       className={`
         px-30
-        max-[500px]:px-5
+        max-[800px]:px-5
         ${darkMode ? 'bg-neutral-900' : 'bg-white'}
       `}
     >
@@ -19,8 +19,8 @@ export default function Profile() {
         <h2
           className={`
             text-[48px] font-bold mb-10
-            max-[500px]:text-[28px]
-            max-[500px]:mb-6
+            max-[800px]:text-[28px]
+            max-[800px]:mb-6
             ${darkMode ? 'text-white' : 'text-[#1f2937]'}
           `}
         >
@@ -33,19 +33,19 @@ export default function Profile() {
       <div
         className="
           grid grid-cols-2 gap-x-32
-          max-[500px]:grid-cols-1
-          max-[500px]:gap-y-8
+          max-[800px]:grid-cols-1
+          max-[800px]:gap-y-8
         "
       >
         <div>
-          <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[20px]">
+          <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[800px]:text-[20px]">
             {language === 'TR'
               ? translations.TR.profile.profile
               : translations.EN.profile.profile}
           </h3>
 
-          <div className="space-y-4 text-[16px] max-[500px]:text-[14px]">
-            <div className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-1">
+          <div className="space-y-4 text-[16px] max-[800px]:text-[14px]">
+            <div className="flex gap-6 max-[800px]:flex-col max-[800px]:gap-1">
               <span className="font-semibold text-gray-500">
                 {language === 'TR'
                   ? translations.TR.profile.dateofbirthday
@@ -58,7 +58,7 @@ export default function Profile() {
               </span>
             </div>
 
-            <div className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-1">
+            <div className="flex gap-6 max-[800px]:flex-col max-[800px]:gap-1">
               <span className="font-semibold text-gray-500">
                 {language === 'TR'
                   ? translations.TR.profile.city
@@ -71,7 +71,7 @@ export default function Profile() {
               </span>
             </div>
 
-            <div className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-1">
+            <div className="flex gap-6 max-[800px]:flex-col max-[800px]:gap-1">
               <span className="font-semibold text-gray-500">
                 {language === 'TR'
                   ? translations.TR.profile.graduate
@@ -84,7 +84,7 @@ export default function Profile() {
               </span>
             </div>
 
-            <div className="flex gap-6 max-[500px]:flex-col max-[500px]:gap-1">
+            <div className="flex gap-6 max-[800px]:flex-col max-[800px]:gap-1">
               <span className="font-semibold text-gray-500">
                 {language === 'TR'
                   ? translations.TR.profile.preferrole
@@ -100,7 +100,7 @@ export default function Profile() {
         </div>
 
         <div>
-          <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[500px]:text-[20px]">
+          <h3 className="text-[32px] font-bold text-violet-600 mb-4 max-[800px]:text-[20px]">
             {language === 'TR'
               ? translations.TR.profile.about
               : translations.EN.profile.about}
@@ -109,7 +109,7 @@ export default function Profile() {
           <p
             className={`
               leading-[28px] mb-6
-              max-[500px]:text-[14px]
+              max-[800px]:text-[14px]
               ${darkMode ? 'text-gray-300' : 'text-gray-500'}
             `}
           >

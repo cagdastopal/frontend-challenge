@@ -10,27 +10,27 @@ export default function Footer() {
     <footer
       className={`
         px-30 py-12
-        max-[500px]:px-5
-        max-[500px]:py-8
+        max-[800px]:px-5
+        max-[800px]:py-8
         ${darkMode ? 'bg-black' : 'bg-gray-100'}
       `}
     >
       <div
         className="
           mx-auto flex items-center justify-between
-          max-[500px]:flex-col
-          max-[500px]:justify-center
-          max-[500px]:items-center
-          max-[500px]:gap-6
-          max-[500px]:text-center
+          max-[800px]:flex-col
+          max-[800px]:justify-center
+          max-[800px]:items-center
+          max-[800px]:gap-6
+          max-[800px]:text-center
         "
       >
         <div>
           <h2
             className={`
               text-[20px] font-bold mb-6
-              max-[500px]:text-[16px]
-              max-[500px]:mb-2
+              max-[800px]:text-[16px]
+              max-[800px]:mb-2
               ${darkMode ? 'text-white' : 'text-[#1f2937]'}
             `}
           >
@@ -43,9 +43,9 @@ export default function Footer() {
         <div
           className="
             flex items-center gap-6 text-[16px]
-            max-[500px]:flex-col
-            max-[500px]:gap-3
-            max-[500px]:text-[14px]
+            max-[800px]:flex-col
+            max-[800px]:gap-3
+            max-[800px]:text-[14px]
           "
         >
           <a
