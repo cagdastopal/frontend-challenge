@@ -21,18 +21,17 @@ export default function Hero() {
           w-full py-12 flex items-center justify-between gap-10
           max-[500px]:flex-col
           max-[500px]:py-8
-          max-[500px]:gap-8
         "
       >
         <div className="max-w-xl max-[500px]:max-w-full max-[500px]:text-center">
           <div
             className="
               flex items-center gap-3 mb-8
-              max-[500px]:justify-center
+              max-[500px]:justify-start
               max-[500px]:mb-5
             "
           >
-            <div className="w-[80px] h-[2px] bg-indigo-400 max-[500px]:w-[50px]"></div>
+            <div className="w-[80px] h-[2px] bg-indigo-400"></div>
 
             <span className="text-violet-600 font-medium max-[500px]:text-[14px]">
               {language === 'TR'
