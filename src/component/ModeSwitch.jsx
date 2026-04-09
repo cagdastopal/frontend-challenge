@@ -2,38 +2,66 @@ import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function ModeSwitch() {
+  const { darkMode, changeDarkMode } = useTheme();
+  const { language, changeLanguageMode } = useLanguage();
 
-  const { darkMode, changeDarkMode  } = useTheme();
-  const { language, changeLanguageMode  } = useLanguage();
+  return (
+    <div
+      className={`
+        flex justify-end items-center text-center
+        pt-10 px-30 gap-[20px] text-[13px] font-bold
+        max-[500px]:px-5
+        max-[500px]:pt-6
+        max-[500px]:gap-3
+        max-[500px]:text-[11px]
+        max-[500px]:flex-wrap
+        ${darkMode ? 'bg-neutral-900' : 'bg-white'}
+      `}
+    >
+      <label className="relative cursor-pointer">
+        <input
+          type="checkbox"
+          value=""
+          checked={darkMode}
+          onChange={changeDarkMode}
+          className="peer sr-only"
+        />
 
-  return(
-    <div className={`flex justify-end items-center text-center pt-10 text-[13px] font-bold gap-[20px] px-30 
-        ${darkMode ? 'bg-neutral-900' : 'bg-white'}`}>
-        <label className="relative cursor-pointer">
-        <input type="checkbox" value="" checked = {darkMode} onChange={changeDarkMode} className="peer sr-only" />
+        <div
+          className="
+            h-6 w-11 rounded-full bg-violet-300 transition
+            peer-checked:bg-violet-600
+            max-[500px]:h-5
+            max-[500px]:w-10
+          "
+        ></div>
 
-        <div className="
-          h-6 w-11 rounded-full bg-violet-300 transition
-          peer-checked:bg-violet-600
-        "></div>
-
-        <span className="
-          absolute left-1 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-gray-300 transition
-          peer-checked:translate-x-5
-        "></span>
+        <span
+          className="
+            absolute left-1 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-gray-300 transition
+            peer-checked:translate-x-5
+            max-[500px]:h-3.5
+            max-[500px]:w-3.5
+            max-[500px]:peer-checked:translate-x-4
+          "
+        ></span>
       </label>
 
-      <span className="uppercase text-gray-600">
-         {darkMode ? 'Light Mode' : 'Dark Mode'}
+      <span className="uppercase text-gray-600 max-[500px]:text-[11px]">
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
       </span>
 
       <span className="text-gray-300">|</span>
 
       <nav>
-        <a href = "#" className="text-[13px] font-bold text-violet-600 uppercase" onClick={changeLanguageMode}> 
-          {language === "TR" ? 'Türkçe' : 'English'} 
+        <a
+          href="#"
+          className="text-[13px] font-bold text-violet-600 uppercase max-[500px]:text-[11px]"
+          onClick={changeLanguageMode}
+        >
+          {language === 'TR' ? 'Türkçe' : 'English'}
         </a>
-      </nav> 
+      </nav>
     </div>
-  )
+  );
 }
